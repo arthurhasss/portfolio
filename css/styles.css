@@ -3705,6 +3705,7 @@ td:last-child {
     transition-delay: 1.5s;
 }
 
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * intro
@@ -3759,8 +3760,13 @@ td:last-child {
     }
 
     .s-intro__content-title {
+        white-space: pre-line; /* Respecte les retours à la ligne */
+        text-align: center;    /* Optionnel : recentre le texte */
+    }
+    .s-intro__content-title {
         font-size: clamp(4.2rem, 8.2vw, 8.8rem);
         color    : white;
+
     }
 
     .s-intro__content-title br {
@@ -3855,6 +3861,7 @@ td:last-child {
     .s-intro__content-text {
         max-width: 80vw;
     }
+
 
     .s-intro__social {
         display: none;
