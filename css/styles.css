@@ -2800,6 +2800,11 @@ td:last-child {
     transition: all 0.5s;
 }
 
+.zoom-icon img:hover {
+    transform: scale(1.2); /* Échelle d'agrandissement */
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
 /* ------------------------------------------------------------------- 
  * ## swiper overrides
  * ------------------------------------------------------------------- */
@@ -4453,4 +4458,9 @@ td:last-child {
     .ss-go-top {
         right: -2rem;
     }
+}
+
+.head-icon{
+    width: 40px;
+    height: 40px;
 }
