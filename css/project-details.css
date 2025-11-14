@@ -1,0 +1,51 @@
+/* Styles for detailed project cards */
+.project-detailed {
+    margin-bottom: var(--vspace-2);
+    padding: var(--vspace-1_5);
+    background: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-detailed .text-projet {
+    margin-bottom: var(--vspace-1);
+    padding-bottom: var(--vspace-0_75);
+    border-bottom: 2px solid var(--color-1);
+}
+
+.project-section {
+    margin-bottom: var(--vspace-1_5);
+}
+
+.project-section h3 {
+    color: var(--color-1);
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.project-section p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.project-section ul {
+    list-style: disc;
+    margin-left: 1.6rem;
+}
+
+.project-section ul li {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+@media screen and (max-width: 600px) {
+    .project-detailed {
+        padding: var(--vspace-1);
+    }
+    
+    .project-section h3 {
+        font-size: 1rem;
+    }
+}

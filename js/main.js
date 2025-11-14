@@ -174,6 +174,49 @@
     } // end ssGLightbox
 
 
+       /* Projects filtering + search
+        * ------------------------------------------------------ */
+        const ssProjectsFiltering = function() {
+
+            const grid = document.querySelector('.projects-grid');
+            if (!grid) return;
+
+            const buttons = document.querySelectorAll('.filter-btn');
+            const search = document.getElementById('projects-search');
+            const cards = Array.from(grid.querySelectorAll('.project-card'));
+
+            function applyFilter() {
+                const activeBtn = document.querySelector('.filter-btn.active');
+                const active = activeBtn ? activeBtn.dataset.filter : 'all';
+                const q = search ? search.value.toLowerCase().trim() : '';
+
+                cards.forEach(card => {
+                    const cat = card.dataset.category || '';
+                    const title = (card.querySelector('.entry__title') || {}).textContent || '';
+                    const desc = (card.querySelector('.project-desc') || {}).textContent || '';
+                    const matchFilter = (active === 'all') || (cat === active);
+                    const matchQuery = !q || (title + ' ' + desc).toLowerCase().includes(q);
+                    card.classList.toggle('hidden', !(matchFilter && matchQuery));
+                });
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    applyFilter();
+                });
+            });
+
+            if (search) {
+                search.addEventListener('input', function() {
+                    applyFilter();
+                });
+            }
+
+        }; // end ssProjectsFiltering
+
+
    /* swiper
     * ------------------------------------------------------ */ 
     const ssSwiper = function() {
@@ -307,6 +350,7 @@
         ssGLightbox();
         ssSwiper();
         ssAlertBoxes();
+        ssProjectsFiltering();
         ssMoveTo();
 
     })();

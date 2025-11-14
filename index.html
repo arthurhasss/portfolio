@@ -17,6 +17,7 @@
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-details.css">
 
     <!-- favicons
     ================================================== -->
@@ -64,7 +65,7 @@
                 <nav class="s-header__nav">    
                     <ul class="s-header__menu-links">
                         <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                        <li><a class="smoothscroll" href="#about">A propos</a></li>
+                        <li><a class="smoothscroll" href="#about">Présentation</a></li>
                         <li><a class="smoothscroll" href="#works">Projets</a></li>
                         <li><a class="smoothscroll" href="#footer">Contact</a></li>
                         <li><a class="smoothscroll" href="./competences.html">Compétences</a></li>
@@ -88,7 +89,7 @@
                         <h1 class="s-intro__content-title">
                              Arthur HASS<br>
                             BUT Informatique
-                            <br> Deuxième année
+                            <br> Troisième année
 
                         </h1>
 
@@ -109,7 +110,7 @@
             </div> <!-- s-intro__content-media -->
 
             <div class="s-intro__btn-download">
-                <a class="btn btn--stroke" href="CV-ArthurHass-2025.pdf">Mon CV</a>
+                <a class="btn btn--stroke" href="CV-ArthurHass-2025-Stage-nv.pdf">Mon CV</a>
             </div> <!-- end s-intro__btn-download -->
 
             <div class="s-intro__scroll-down">
@@ -126,56 +127,63 @@
         <!-- # about
         ================================================== -->
         <section id="about" class="s-about target-section">
-
-            <div class="row s-about__content">
-                <div class="column xl-12">    
-                    
-                    <div class="section-header" data-num="01">
-                        <h2 class="text-display-title">A propos</h2>
                     </div> <!-- end section-header -->
+                <div class="row s-about__content">
+                    <div class="column xl-12">
+                        <div class="section-header" data-num="01">
+                            <h2 class="text-display-title">Présentation & Parcours</h2>
+                        </div>
 
-                    <p class="attention-getter">
-                        Je suis Arthur Hass, étudiant en deuxième année de BUT Informatique à l'IUT Montpellier-Sète. Passionné par le monde de la technologie, j'évolue dans des projets qui allient programmation, gestion de projets et développement web. Mon objectif est de transformer mes connaissances en solutions concrètes et créatives, tout en m'enrichissant continuellement à travers de nouveaux défis.
+                        <h3>Présentation</h3>
+                        <p class="attention-getter">Bonjour — je suis Arthur Hass, étudiant en 3e année de BUT Informatique (IUT Montpellier-Sète). Je recherche actuellement un stage en entreprise pour ma 3e année afin de renforcer mes compétences techniques et participer à des projets concrets.</p>
 
-                        En parallèle de mes études, je suis également auto-entrepreneur dans le domaine de l'achat et revente de chaussures neuves, ce qui m'a permis de développer des compétences pratiques en gestion, négociation et relation client.
+                        <h3>Biographie</h3>
+                        <ul class="attention-getter">
+                            <li>2022 — Début auto-entreprise : achat-revente de chaussures (gestion, logistique, relation client).</li>
+                            <li>2023 — Expériences saisonnières (préparateur de commande, travail à la vigne) : sens du travail opérationnel et rigueur.</li>
+                            <li>2025 — Stage en entreprise (Ile Maurice) : intégration d'une interface et travail sur l'automatisation/comparaison de fichiers avec des outils d'IA.</li>
+                            <li>2023-2026 — Étudiant en BUT Informatique : projets académiques variés (web, simulation, maquettes UX).</li>
+                        </ul>
 
-                    </p>
+                        <h3>Parcours académique</h3>
+                        <p class="attention-getter">Formation principale : BUT Informatique (3 ans). Compétences développées : programmation (Java, C, C#, Python), développement web (HTML/CSS, JavaScript, PHP / Symfony), bases de données (SQL), et outils de prototypage (Figma).</p>
 
-                    <p class="attention-getter">
-                        Explorez mes projets, découvrez mon parcours, et n'hésitez pas à me contacter pour toute collaboration ou échange autour de l'informatique et de l'entrepreneuriat.
-                    </p>
+                        <h3>Projets professionnels post-BUT </h3>
+                        <p class="attention-getter">Je souhaite m'orienter vers des projets impliquant architecture back-end, intégration d'API (Cloud / IA) et interfaces utilisateur robustes. Voici des exemples de types de projets sur lesquels je voudrais travailler :</p>
+                        <ul class="attention-getter">
+                            <li><strong>Applications métiers :</strong> plateformes d'administration (gestion d'utilisateurs, reporting, import/export de données) — technologies visées : Symfony / PHP, JS, SQL.</li>
+                            <li><strong>Intégration Cloud & IA :</strong> exploitation d'API Azure, workflows automatisés et enrichissement de données par IA.</li>
+                            <li><strong>Produits web pour l'accessibilité :</strong> interfaces et maquettes UX dédiées aux personnes en situation de handicap (expérience HandiFun).</li>
+                            <li><strong>Applications temps réel :</strong> outils météo / notifications pour usages loisirs ou professionnels (par ex. Wavy — application météo pour activités nautiques).</li>
+                        </ul>
+                      
+                  
 
                     <div class="grid-list-items s-about__blocks">
 
                         <div class="grid-list-items__item s-about__block">
                             <h4 class="s-about__block-title">Projets réalisés</h4>
                             <ul class="s-about__list">
+                                 <li>
+                                    Wavy — Application météo
+                                    <span>Contexte : application indiquant la météo pour sports nautiques et loisirs.</span>
+                                    <span>Compétences : JavaScript, API météo (Fetch), HTML/CSS, gestion d'état côté client.</span>
+                                </li>
                                 <li>
                                     Application de poursuite d'étude
-                                    <span>Connectant professeurs, universités et étudiants</span>
-                                    <span>PHP, JavaScript, SQL, HTML/CSS</span>
+                                    <span>Contexte : site de gestion académique pour une formation (gestion des étudiants, vœux, rapports).</span>
+                                    <span>Compétences : PHP (Symfony), JavaScript, SQL, HTML/CSS, import de données.</span>
                                 </li>
                                 <li>
-                                    Modélisation d'un jeu
-                                    <span>Jeu Train</span>
-                                    <span>Java, JavaFX</span>
+                                    HandiFun — Maquette UX/UI
+                                    <span>Contexte : maquette Figma pour faciliter l'accès au sport aux personnes en situation de handicap.</span>
+                                    <span>Compétences : UX/UI, Figma, prototypage, travail en équipe.</span>
                                 </li>
                                 <li>
-                                    Création d'une maquette application mobile
-                                    <span>Pour les handicapés souhaitant faire du sport</span>
-                                    <span>Figma, Canva</span>
+                                    Modélisation de jeu — Train
+                                    <span>Contexte : projet académique de modélisation et simulation.</span>
+                                    <span>Compétences : Java, JavaFX, conception orientée objet.</span>
                                 </li>
-                                <li>
-                                    Création d'une page Web
-                                    <span>Présentant un escape game</span>
-                                    <span>HTML/CSS</span>
-                                </li>
-                                <li>
-                                    Création d'un festival fictif
-                                    <span>Dédié aux youtubeurs</span>
-                                    <span>Canva, Excel</span>
-                                </li>
-
                             </ul>
                         </div> <!--end s-about__block -->
 
@@ -271,6 +279,28 @@
 
 
             <div class="row folio-entries">
+                <h2 class="text-projet">Wavy — Application météo</h2>
+                <p>
+                    Ce projet consiste en la conception et le déploiement d’un site web complet destiné à la gestion académique et administrative d’une formation universitaire. Développé dans le cadre de mon BUT Informatique, le site propose une solution intégrée pour gérer les étudiants, leurs résultats, leurs vœux de poursuite d’études, ainsi que les rôles et permissions des utilisateurs.
+                    Il inclut également un système avancé d’importation de données, d’affichage interactif et de génération de rapports.
+                    <a href="https://webinfo.iutmontp.univ-montp2.fr/~dardalhonn/sae3a-base/web/controleurFrontal.php?action=connecter">Lien du Projet</a>.
+                </p>
+
+                <div class="column entry">
+                    <a href="images/Projets/accueil-poursuite.png" class="entry__link glightbox" data-glightbox="title: WoodCraft; description: .entry__desc-02">
+                        <div class="entry__thumb">
+                            <img src="images/Projets/accueil-poursuite.png" srcset="images/Projets/accueil-poursuite.png 1x, images/Projets/accueil-poursuite.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Page d'accueil</h4>
+
+                        </div>
+                    </a>
+                </div>
+
+
+
+
                 <h2 class="text-projet">Application de poursuites d'études</h2>
                 <p>
                     Ce projet consiste en la conception et le déploiement d’un site web complet destiné à la gestion académique et administrative d’une formation universitaire. Développé dans le cadre de mon BUT Informatique, le site propose une solution intégrée pour gérer les étudiants, leurs résultats, leurs vœux de poursuite d’études, ainsi que les rôles et permissions des utilisateurs.
@@ -288,7 +318,7 @@
 
                         </div>
                     </a>
-                </div> <!-- entry -->
+                </div> 
 
 
 
