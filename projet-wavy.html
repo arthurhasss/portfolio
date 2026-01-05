@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wavy Météo — Application météo | Arthur HASS</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/project-page.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="page" class="s-pagewrap">
+
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logocapture.png" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li><a href="index.html#intro">Intro</a></li>
+                        <li><a href="index.html#about">Présentation</a></li>
+                        <li class="current"><a href="index.html#works">Projets</a></li>
+                        <li><a href="index.html#footer">Contact</a></li>
+                        <li><a href="./competences.html">Compétences</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+        <section class="s-project-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="project-hero__content">
+                        <a href="index.html#works" class="project-hero__back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
+                            </svg>
+                            Retour aux projets
+                        </a>
+                        
+                        <div class="project-title-wrapper">
+                            <img src="images/Projets/logo.png" alt="Logo Wavy">
+                            <h1 class="project-hero__title">Wavy Météo</h1>
+                        </div>
+                        
+                        <p class="project-hero__subtitle">Application web dédiée aux pratiquants de sports nautiques</p>
+                        
+                        <div class="project-hero__tags">
+                            <span class="project-card__tag">PHP / Symfony</span>
+                            <span class="project-card__tag">SQL</span>
+                            <span class="project-card__tag">API Météo</span>
+                            <span class="project-card__tag">JavaScript</span>
+                            <span class="project-card__tag">HTML/CSS</span>
+                        </div>
+                        
+                        <div class="project-hero__meta">
+                            <span><strong>Période :</strong> Depuis septembre 2025</span>
+                            <span><strong>Équipe :</strong> 6 personnes</span>
+                            <span><strong>Méthode :</strong> Agile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-project-content">
+            <div class="row">
+                <div class="column xl-12 lg-12 md-12">
+                    
+                    <div class="project-section">
+                         <h3>Présentation du projet</h3>
+                        <p class="attention-getter">
+                            Wavy Météo est une application web multi-plateforme conçue pour les passionnés de sports nautiques. 
+                            Elle permet de consulter les données météorologiques essentielles (vent, vagues, marées, température) 
+                            pour pratiquer des activités comme le surf, la voile, le kitesurf, la plongée ou simplement profiter de la plage, 
+                            et ce partout dans le monde.
+                        </p>
+                       <p class="attention-getter">
+                            Ce projet a été réalisé en équipe de 6 personnes dans le cadre de notre formation BUT Informatique, 
+                            en suivant la méthodologie Agile pour garantir une organisation efficace et une livraison itérative des fonctionnalités.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Fonctionnalités principales</h3>
+                        <ul class="attention-getter">
+                            <li><strong>Données météo en temps réel :</strong> Affichage des conditions météorologiques essentielles aux sports nautiques</li>
+                            <li><strong>Couverture mondiale :</strong> Recherche de spots et de conditions météo partout dans le monde</li>
+                            <li><strong>Interface personnalisable :</strong> Adaptation aux préférences utilisateurs (thèmes, unités, favoris)</li>
+                            <li><strong>Accessibilité :</strong> Options pour les personnes en situation de handicap</li>
+                            <li><strong>Authentification sécurisée :</strong> Système de connexion avancé avec protection des données</li>
+                            <li><strong>Gestion des accès :</strong> Contrôle des permissions et rôles utilisateurs</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Architecture technique</h3>
+                        <div class="project-tech-grid">
+                            <div class="project-tech-item" >
+                                <h4>Backend</h4>
+                                <p>PHP 8, Symfony Framework, Architecture MVC</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Base de données</h4>
+                                <p>MySQL, Doctrine ORM, migrations</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Frontend</h4>
+                                <p>HTML5, CSS3, JavaScript, Twig</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>API externes</h4>
+                                <p>Intégration d'API météo temps réel</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Sécurité</h4>
+                                <p>Authentification, hashage, CSRF</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Gestion de projet</h4>
+                                <p>Méthode Agile, sprints, Git</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Défis techniques relevés</h3>
+                        <ul class="attention-getter">
+                            <li><strong>Intégration multi-API :</strong> Gestion de plusieurs sources de données météo</li>
+                            <li><strong>Performance :</strong> Mise en cache des données pour optimiser les temps de réponse</li>
+                            <li><strong>Accessibilité WCAG :</strong> Respect des normes pour une application inclusive</li>
+                            <li><strong>Sécurité renforcée :</strong> Protection contre les injections SQL, XSS et CSRF</li>
+                            <li><strong>Responsive design :</strong> Interface adaptée à tous les appareils</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Captures d'écran</h3>
+                        <div class="project-gallery">
+                            <div class="project-gallery__item" onclick="openModal('images/wavy/screen1.png', 'Interface principale')">
+                                <img src="images/wavy/screen1.png" alt="Wavy - Interface principale">
+                                <span class="project-gallery__caption">Interface principale</span>
+                            </div>
+                            <div class="project-gallery__item" onclick="openModal('images/wavy/screen2.png', 'Détails météo')">
+                                <img src="images/wavy/screen2.png" alt="Wavy - Détails météo">
+                                <span class="project-gallery__caption">Détails météo</span>
+                            </div>
+                            <div class="project-gallery__item" onclick="openModal('images/wavy/screen3.png', 'Recherche de spots')">
+                                <img src="images/wavy/screen3.png" alt="Wavy - Recherche de spots">
+                                <span class="project-gallery__caption">Recherche de spots</span>
+                            </div>
+                            <div class="project-gallery__item" onclick="openModal('images/wavy/screen4.png', 'Envoi de mail')">
+                                <img src="images/wavy/screen4.png" alt="Wavy - Paramètres">
+                                <span class="project-gallery__caption">Envoi de mail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Compétences développées</h3>
+                        <ul class="attention-getter">
+                            <li>Développement backend avec PHP/Symfony</li>
+                            <li>Conception et gestion de base de données MySQL</li>
+                            <li>Intégration et consommation d'API REST</li>
+                            <li>Mise en place de systèmes d'authentification sécurisés</li>
+                            <li>Développement d'interfaces accessibles</li>
+                            <li>Travail en équipe avec la méthode Agile</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Accéder au projet</h3>
+                        <a href="https://webinfo.iutmontp.univ-montp2.fr/~wintern/sae_meteo/public/" class="project-external-link" target="_blank">
+                            Voir l'application en ligne
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal unique pour toutes les images -->
+        <div class="image-modal" id="imageModal">
+            <span class="image-modal__close" onclick="closeModal()">&times;</span>
+            <img class="image-modal__content" id="modalImage" src="" alt="">
+        </div>
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section" style="padding-top: 4rem;">
+
+            <div class="row s-footer__content">
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        Vous avez une question ou souhaitez discuter d'un projet ? N'hésitez pas à me contacter.
+                        Je suis toujours ouvert à de nouvelles collaborations et prêt à relever de nouveaux défis. Faisons en sorte que vos idées deviennent réalité !
+                    </p>               
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Suivez-moi</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.linkedin.com/in/arthur-hass-109b4b2aa/">LinkedIn</a></li>
+                                <li><a href="https://github.com/arthurhasss">GitHub</a></li>
+                                <li><a href="https://www.vinted.fr/member/19955810">Vinted</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contactez moi</h5>
+                            <ul class="link-list">
+                                <li>+33 7 83 99 73 14</li>
+                                <li>arthur.hass@outlook.fr</li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+               
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:arthur.hass@outlook.fr" class="btn btn--primary btn--large u-fullwidth">Mail</a>
+                </div>
+          
+                <div class="column xl-6 tab-12">                    
+                    <a href="CV-ArthurHass-2025-Stage-Agde.pdf" class="btn btn--stroke btn--large u-fullwidth">Mon CV</a>
+                </div>
+            
+            </div> <!-- end section-footer__buttons -->              
+            
+            <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/arthur-hass-109b4b2aa/" class="zoom-icon">
+                                <img src="images/icons/linkedin.png" alt="Linkedin" class="head-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/arthurhasss" class="zoom-icon">
+                                <img src="images/icons/github.png" alt="GitHub" class="head-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.vinted.fr/member/19955810" class="zoom-icon">
+                                <img src="images/icons/vinted.png" alt="Vinted" class="head-icon" />
+                            </a>
+                        </li>
+
+
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Arthur HASS 2025</span>
+                    </p>
+                </div>
+
+            </div> <!-- end section-footer__bottom -->          
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div> <!-- end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
+
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer avec Echap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Fermer en cliquant en dehors
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+</html>
