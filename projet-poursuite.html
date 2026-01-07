@@ -10,12 +10,8 @@
         document.documentElement.classList.add('js');
     </script>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/project-details.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/project-page.css">
 
@@ -36,8 +32,6 @@
 
     <div id="page" class="s-pagewrap">
 
-        <!-- # site header 
-        ================================================== -->
         <header class="s-header">
             <div class="row s-header__inner">
 
@@ -63,163 +57,249 @@
             </div> <!-- end s-header__inner -->
         </header> <!-- end s-header -->
 
-        <!-- Hero Section -->
-        <section class="s-project-hero py-5" style="padding-top: 140px !important;">
-            <div class="container">
-                <a href="index.html#works" class="btn btn-outline-dark mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="me-2">
-                        <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
-                    </svg>
-                    Retour aux projets
-                </a>
-                
-                <div class="d-flex align-items-center gap-3 mb-3">
-                    <img src="images/Projets/poursuite/logo.png" alt="Logo Poursuite" class="rounded-3 shadow" style="width: 60px; height: 60px; object-fit: cover;">
-                    <h1 class="display-4 fw-bold mb-0 d-flex align-items-center" style="line-height: 1;">Application de poursuites d'études</h1>
-                </div>
-                
-                <p class="lead text-secondary mb-3">Site web de gestion académique et administrative</p>
-                
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                    <span class="badge bg-dark">PHP / Symfony</span>
-                    <span class="badge bg-dark">JavaScript</span>
-                    <span class="badge bg-dark">SQL</span>
-                    <span class="badge bg-dark">HTML/CSS</span>
-                </div>
-                
-                <div class="d-flex flex-wrap gap-4 pt-3 border-top">
-                    <span class="text-muted"><strong class="text-dark">Période :</strong> 2024</span>
-                    <span class="text-muted"><strong class="text-dark">Équipe :</strong> Projet académique</span>
-                    <span class="text-muted"><strong class="text-dark">Contexte :</strong> BUT Informatique</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Content Section -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10">
+        <section class="s-project-hero">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="project-hero__content">
+                        <a href="index.html#works" class="project-hero__back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
+                            </svg>
+                            Retour aux projets
+                        </a>
                         
-                        <!-- Présentation -->
-                        <div class="mb-5">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Contexte du projet</h2>
-                            <p class="fs-5 lh-lg">
-                                Ce projet a été développé dans le cadre de mon BUT Informatique. Il s'agit d'un site web complet 
-                                destiné à la gestion académique et administrative d'une formation universitaire. La plateforme 
-                                permet de gérer efficacement les étudiants, leurs résultats, leurs vœux de poursuite d'études, 
-                                ainsi que les différents rôles et permissions des utilisateurs.
-                            </p>
+                        <div class="project-title-wrapper">
+                            <h1 class="project-hero__title">Application de poursuites d'études</h1>
                         </div>
-
-                        <!-- Fonctionnalités -->
-                        <div class="mb-5">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Fonctionnalités principales</h2>
-                            <ul class="list-unstyled fs-5">
-                                <li class="mb-2"><span class="me-2">•</span>Gestion complète des étudiants (CRUD)</li>
-                                <li class="mb-2"><span class="me-2">•</span>Suivi des résultats académiques</li>
-                                <li class="mb-2"><span class="me-2">•</span>Système de vœux pour les poursuites d'études</li>
-                                <li class="mb-2"><span class="me-2">•</span>Gestion des rôles et permissions utilisateurs</li>
-                                <li class="mb-2"><span class="me-2">•</span>Import/export de données (CSV, Excel)</li>
-                                <li class="mb-2"><span class="me-2">•</span>Génération de rapports et statistiques</li>
-                                <li class="mb-2"><span class="me-2">•</span>Interface d'administration complète</li>
-                            </ul>
+                        
+                        <p class="project-hero__subtitle">Site web de gestion académique et administrative</p>
+                        
+                        <div class="project-hero__tags">
+                            <span class="project-card__tag">PHP / Symfony</span>
+                            <span class="project-card__tag">JavaScript</span>
+                            <span class="project-card__tag">SQL</span>
+                            <span class="project-card__tag">HTML/CSS</span>
                         </div>
-
-                        <!-- Architecture technique -->
-                        <div class="mb-5">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Technologies utilisées</h2>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Backend</h5>
-                                            <p class="card-text text-muted">PHP 8, Symfony Framework</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Frontend</h5>
-                                            <p class="card-text text-muted">HTML5, CSS3, JavaScript</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Base de données</h5>
-                                            <p class="card-text text-muted">MySQL, Doctrine ORM</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Outils</h5>
-                                            <p class="card-text text-muted">Git, Composer, Twig</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                        <div class="project-hero__meta">
+                            <span><strong>Période :</strong> 2024</span>
+                            <span><strong>Équipe :</strong> Projet académique</span>
+                            <span><strong>Contexte :</strong> BUT Informatique</span>
                         </div>
-
-                        <!-- Captures d'écran -->
-                        <div class="mb-5">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Captures d'écran</h2>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <a href="images/Projets/accueil-poursuite.png" class="glightbox">
-                                        <img src="images/Projets/accueil-poursuite.png" alt="Page d'accueil" class="img-fluid rounded shadow">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Compétences -->
-                        <div class="mb-5">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Compétences développées</h2>
-                            <ul class="list-unstyled fs-5">
-                                <li class="mb-2"><span class="me-2">•</span>Architecture MVC avec Symfony</li>
-                                <li class="mb-2"><span class="me-2">•</span>Conception et modélisation de base de données</li>
-                                <li class="mb-2"><span class="me-2">•</span>Sécurité web (authentification, autorisation)</li>
-                                <li class="mb-2"><span class="me-2">•</span>Manipulation de fichiers et imports de données</li>
-                                <li class="mb-2"><span class="me-2">•</span>Travail en équipe avec Git</li>
-                            </ul>
-                        </div>
-
-                        <!-- Lien projet -->
-                        <div class="mb-4">
-                            <h2 class="h3 fw-bold border-bottom pb-2 mb-3">Accéder au projet</h2>
-                            <a href="https://webinfo.iutmontp.univ-montp2.fr/~dardalhonn/sae3a-base/web/controleurFrontal.php?action=connecter" class="btn btn-dark btn-lg" target="_blank">
-                                Voir l'application en ligne
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="ms-2">
-                                    <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
-                                </svg>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer id="footer" class="s-footer">
+        <section class="s-project-content">
+            <div class="row">
+                <div class="column xl-12 lg-12 md-12">
+                    
+                    <div class="project-section">
+                         <h3>Contexte du projet</h3>
+                        <p class="attention-getter">
+                            Ce projet a été développé dans le cadre de mon BUT Informatique. Il s'agit d'un site web complet 
+                            destiné à la gestion académique et administrative d'une formation universitaire. La plateforme 
+                            permet de gérer efficacement les étudiants, leurs résultats, leurs vœux de poursuite d'études, 
+                            ainsi que les différents rôles et permissions des utilisateurs.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Fonctionnalités principales</h3>
+                        <ul class="attention-getter">
+                            <li><strong>Gestion complète des étudiants :</strong> Opérations CRUD (Create, Read, Update, Delete)</li>
+                            <li><strong>Suivi académique :</strong> Suivi des résultats et performances des étudiants</li>
+                            <li><strong>Système de vœux :</strong> Gestion des poursuites d'études et candidatures</li>
+                            <li><strong>Contrôle d'accès :</strong> Gestion des rôles et permissions utilisateurs</li>
+                            <li><strong>Import/Export :</strong> Traitement de fichiers CSV et Excel pour les données</li>
+                            <li><strong>Rapports et statistiques :</strong> Génération de tableaux de bord analytiques</li>
+                            <li><strong>Interface d'administration :</strong> Panneau de contrôle complet pour les administrateurs</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Architecture technique</h3>
+                        <div class="project-tech-grid">
+                            <div class="project-tech-item">
+                                <h4>Backend</h4>
+                                <p>PHP 8, Symfony Framework</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Frontend</h4>
+                                <p>HTML5, CSS3, JavaScript</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Base de données</h4>
+                                <p>MySQL, Doctrine ORM</p>
+                            </div>
+                            <div class="project-tech-item">
+                                <h4>Outils</h4>
+                                <p>Git, Composer, Twig</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Captures d'écran</h3>
+                        <div class="project-gallery">
+                            <div class="project-gallery__item" onclick="openModal('images/Projets/accueil-poursuite.png', 'Page d\'accueil')">
+                                <img src="images/Projets/accueil-poursuite.png" alt="Poursuite - Page d'accueil">
+                                <span class="project-gallery__caption">Page d'accueil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                         <h3>Compétences développées</h3>
+                        <ul class="attention-getter">
+                            <li>Architecture MVC avec Symfony</li>
+                            <li>Conception et modélisation de base de données</li>
+                            <li>Sécurité web (authentification, autorisation)</li>
+                            <li>Manipulation de fichiers et imports de données</li>
+                            <li>Travail en équipe avec Git</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Accéder au projet</h3>
+                        <a href="https://webinfo.iutmontp.univ-montp2.fr/~dardalhonn/sae3a-base/web/controleurFrontal.php?action=connecter" class="project-external-link" target="_blank">
+                            Voir l'application en ligne
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal unique pour toutes les images -->
+        <div class="image-modal" id="imageModal">
+            <span class="image-modal__close" onclick="closeModal()">&times;</span>
+            <img class="image-modal__content" id="modalImage" src="" alt="">
+        </div>
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section" style="padding-top: 4rem;">
+
+            <div class="row s-footer__content">
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <p class="attention-getter">
+                        Vous avez une question ou souhaitez discuter d'un projet ? N'hésitez pas à me contacter.
+                        Je suis toujours ouvert à de nouvelles collaborations et prêt à relever de nouveaux défis. Faisons en sorte que vos idées deviennent réalité !
+                    </p>               
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Suivez-moi</h5>
+                            <ul class="link-list">
+                                <li><a href="https://www.linkedin.com/in/arthur-hass-109b4b2aa/">LinkedIn</a></li>
+                                <li><a href="https://github.com/arthurhasss">GitHub</a></li>
+                                <li><a href="https://www.vinted.fr/member/19955810">Vinted</a></li>
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contactez moi</h5>
+                            <ul class="link-list">
+                                <li>+33 7 83 99 73 14</li>
+                                <li>arthur.hass@outlook.fr</li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+               
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:arthur.hass@outlook.fr" class="btn btn--primary btn--large u-fullwidth">Mail</a>
+                </div>
+          
+                <div class="column xl-6 tab-12">                    
+                    <a href="CV-ArthurHass-2025-Stage-Agde.pdf" class="btn btn--stroke btn--large u-fullwidth">Mon CV</a>
+                </div>
+            
+            </div> <!-- end section-footer__buttons -->              
+            
             <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/arthur-hass-109b4b2aa/" class="zoom-icon">
+                                <img src="images/icons/linkedin.png" alt="Linkedin" class="head-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/arthurhasss" class="zoom-icon">
+                                <img src="images/icons/github.png" alt="GitHub" class="head-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.vinted.fr/member/19955810" class="zoom-icon">
+                                <img src="images/icons/vinted.png" alt="Vinted" class="head-icon" />
+                            </a>
+                        </li>
+
+
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
                 <div class="column xl-6 lg-12">
                     <p class="ss-copyright">
                         <span>© Copyright Arthur HASS 2025</span>
                     </p>
                 </div>
-            </div>
-        </footer>
+
+            </div> <!-- end section-footer__bottom -->          
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div> <!-- end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
 
     </div>
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openModal(imageSrc, imageAlt) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modalImage.alt = imageAlt;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fermer avec Echap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Fermer en cliquant en dehors
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
 </body>
 </html>
