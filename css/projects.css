@@ -6,6 +6,7 @@
     background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, #f5f5f5 100%);
     position: relative;
     overflow: hidden;
+    padding-bottom: var(--vspace-6);
 }
 
 .s-works::before {
