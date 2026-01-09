@@ -217,6 +217,225 @@
     color: #1a1a1a;
 }
 
+/* ===================================================================
+ * Modern Tech Stack Design
+ * ================================================================== */
+.tech-stack-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-stack-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-stack-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #C73E1D, #e85a3a);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s ease;
+}
+
+.tech-stack-item:hover::before {
+    transform: scaleY(1);
+}
+
+.tech-stack-item:hover {
+    transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(199, 62, 29, 0.2);
+}
+
+.tech-stack-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #C73E1D 0%, #e85a3a 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(199, 62, 29, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-stack-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: white;
+}
+
+.tech-stack-item:hover .tech-stack-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(199, 62, 29, 0.4);
+}
+
+.tech-stack-content {
+    flex: 1;
+}
+
+.tech-stack-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.3rem 0;
+}
+
+.tech-stack-content p {
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0 0 0.6rem 0;
+    line-height: 1.4;
+}
+
+.tech-stack-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(199, 62, 29, 0.1);
+    color: #C73E1D;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid rgba(199, 62, 29, 0.2);
+}
+
+/* Themed Tech Stack - Wavy (Sky Blue) */
+.page-theme-wavy .tech-stack-item {
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    border-color: rgba(79, 195, 247, 0.2);
+}
+
+.page-theme-wavy .tech-stack-item::before {
+    background: linear-gradient(180deg, #4fc3f7, #81d4fa);
+}
+
+.page-theme-wavy .tech-stack-item:hover {
+    border-color: rgba(79, 195, 247, 0.4);
+    box-shadow: 0 15px 40px rgba(79, 195, 247, 0.15);
+}
+
+.page-theme-wavy .tech-stack-icon {
+    background: linear-gradient(135deg, #4fc3f7 0%, #81d4fa 100%);
+    box-shadow: 0 4px 15px rgba(79, 195, 247, 0.35);
+}
+
+.page-theme-wavy .tech-stack-item:hover .tech-stack-icon {
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.45);
+}
+
+.page-theme-wavy .tech-stack-badge {
+    background: rgba(79, 195, 247, 0.15);
+    color: #0277bd;
+    border-color: rgba(79, 195, 247, 0.3);
+}
+
+/* Themed Tech Stack - Poursuite (Salmon Orange) */
+.page-theme-poursuite .tech-stack-item {
+    background: linear-gradient(135deg, #fff8f5 0%, #ffffff 100%);
+    border-color: rgba(255, 171, 145, 0.25);
+}
+
+.page-theme-poursuite .tech-stack-item::before {
+    background: linear-gradient(180deg, #ff7043, #ffab91);
+}
+
+.page-theme-poursuite .tech-stack-item:hover {
+    border-color: rgba(255, 112, 67, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 112, 67, 0.12);
+}
+
+.page-theme-poursuite .tech-stack-icon {
+    background: linear-gradient(135deg, #ff7043 0%, #ffab91 100%);
+    box-shadow: 0 4px 15px rgba(255, 112, 67, 0.35);
+}
+
+.page-theme-poursuite .tech-stack-item:hover .tech-stack-icon {
+    box-shadow: 0 8px 25px rgba(255, 112, 67, 0.45);
+}
+
+.page-theme-poursuite .tech-stack-badge {
+    background: rgba(255, 112, 67, 0.12);
+    color: #d84315;
+    border-color: rgba(255, 112, 67, 0.25);
+}
+
+/* Themed Tech Stack - Avatar (Deep Blue) */
+.page-theme-avatar .tech-stack-item {
+    background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+    border-color: rgba(100, 181, 246, 0.25);
+}
+
+.page-theme-avatar .tech-stack-item::before {
+    background: linear-gradient(180deg, #1565c0, #42a5f5);
+}
+
+.page-theme-avatar .tech-stack-item:hover {
+    border-color: rgba(30, 136, 229, 0.4);
+    box-shadow: 0 15px 40px rgba(21, 101, 192, 0.12);
+}
+
+.page-theme-avatar .tech-stack-icon {
+    background: linear-gradient(135deg, #1565c0 0%, #42a5f5 100%);
+    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.35);
+}
+
+.page-theme-avatar .tech-stack-item:hover .tech-stack-icon {
+    box-shadow: 0 8px 25px rgba(21, 101, 192, 0.45);
+}
+
+.page-theme-avatar .tech-stack-badge {
+    background: rgba(21, 101, 192, 0.1);
+    color: #1565c0;
+    border-color: rgba(21, 101, 192, 0.25);
+}
+
+/* Responsive for tech stack */
+@media screen and (max-width: 768px) {
+    .tech-stack-modern {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tech-stack-item {
+        padding: 1.25rem;
+    }
+    
+    .tech-stack-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+    }
+    
+    .tech-stack-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .tech-stack-content h4 {
+        font-size: 1.35rem;
+    }
+    
+    .tech-stack-content p {
+        font-size: 1.2rem;
+    }
+}
+
 /* Tools Grid */
 .project-tools {
     display: grid;
@@ -484,5 +703,616 @@
 
     .project-gallery {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================================================
+ * Project Page Themes - Unique colors per project page
+ * ================================================================== */
+
+/* === WAVY MÉTÉO PAGE - Sky Blue, White & Sunshine === */
+.page-theme-wavy {
+    background: linear-gradient(180deg, #e8f4fc 0%, #ffffff 100%);
+}
+
+.page-theme-wavy .s-project-hero {
+    background: linear-gradient(135deg, #e0f4ff 0%, #ffffff 40%, #fff9e6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-wavy .s-project-hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 213, 79, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+    animation: sunGlow 4s ease-in-out infinite;
+}
+
+.page-theme-wavy .s-project-hero::after {
+    content: '☀️';
+    position: absolute;
+    top: 180px;
+    right: 80px;
+    font-size: 5rem;
+    filter: drop-shadow(0 8px 20px rgba(255, 193, 7, 0.5));
+    animation: sunFloat 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes sunGlow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes sunFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+.page-theme-wavy .project-hero__back {
+    color: #0277bd;
+    background: rgba(79, 195, 247, 0.15);
+    border-color: rgba(79, 195, 247, 0.3);
+}
+
+.page-theme-wavy .project-hero__back:hover {
+    background: rgba(79, 195, 247, 0.25);
+    color: #01579b;
+}
+
+.page-theme-wavy .project-hero__title {
+    background: linear-gradient(135deg, #0277bd 0%, #4fc3f7 50%, #ffd54f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-theme-wavy .project-hero__subtitle {
+    color: #37474f;
+    font-size: 1.8rem;
+}
+
+.page-theme-wavy .project-hero__tags .project-card__tag {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2) 0%, rgba(255, 213, 79, 0.15) 100%);
+    color: #0277bd;
+    border: 2px solid rgba(79, 195, 247, 0.4);
+    font-weight: 700;
+}
+
+.page-theme-wavy .project-hero__tags .project-card__tag:hover {
+    background: linear-gradient(135deg, #4fc3f7 0%, #81d4fa 100%);
+    color: #fff;
+}
+
+.page-theme-wavy .project-hero__meta {
+    border-top-color: rgba(79, 195, 247, 0.3);
+}
+
+.page-theme-wavy .project-hero__meta strong {
+    color: #0277bd;
+}
+
+.page-theme-wavy .s-project-content {
+    background: linear-gradient(180deg, #ffffff 0%, #e8f4fc 50%, #fff9e6 100%);
+}
+
+.page-theme-wavy .project-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+    border: 2px solid rgba(79, 195, 247, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-wavy .project-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4fc3f7, #81d4fa, #ffd54f);
+}
+
+.page-theme-wavy .project-section:hover {
+    box-shadow: 0 15px 50px rgba(79, 195, 247, 0.2);
+    border-color: rgba(79, 195, 247, 0.4);
+}
+
+.page-theme-wavy .project-section h3 {
+    color: #0277bd;
+    position: relative;
+    display: inline-block;
+}
+
+.page-theme-wavy .project-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4fc3f7, #ffd54f);
+    border-radius: 2px;
+}
+
+.page-theme-wavy .project-list li::before {
+    background: linear-gradient(135deg, #4fc3f7, #ffd54f);
+}
+
+.page-theme-wavy .project-tech-item,
+.page-theme-wavy .project-tool-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+    border: 2px solid rgba(79, 195, 247, 0.2);
+}
+
+.page-theme-wavy .project-tech-item::before,
+.page-theme-wavy .project-tool-card::before {
+    background: linear-gradient(90deg, #4fc3f7, #ffd54f);
+}
+
+.page-theme-wavy .project-tech-item:hover,
+.page-theme-wavy .project-tool-card:hover {
+    box-shadow: 0 15px 40px rgba(79, 195, 247, 0.2);
+    border-color: #4fc3f7;
+}
+
+.page-theme-wavy .project-tech-item h4 {
+    color: #0277bd;
+}
+
+.page-theme-wavy .project-gallery__item {
+    border: 3px solid rgba(79, 195, 247, 0.3);
+}
+
+.page-theme-wavy .project-gallery__item:hover {
+    border-color: #4fc3f7;
+    box-shadow: 0 20px 50px rgba(79, 195, 247, 0.3);
+}
+
+.page-theme-wavy .project-external-link {
+    background: linear-gradient(135deg, #0277bd 0%, #4fc3f7 100%);
+}
+
+.page-theme-wavy .project-external-link:hover {
+    background: linear-gradient(135deg, #01579b 0%, #0288d1 100%);
+    box-shadow: 0 10px 30px rgba(79, 195, 247, 0.4);
+}
+
+.page-theme-wavy .s-footer {
+    background: linear-gradient(180deg, #e0f4ff 0%, #0277bd 100%);
+}
+
+/* Decorative wave animation for Wavy page */
+.page-theme-wavy .s-project-content::before {
+    content: '🌊';
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3rem;
+    opacity: 0.5;
+    animation: waveFloat 2s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes waveFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+
+/* === POURSUITE D'ÉTUDES PAGE - Salmon Orange & White === */
+.page-theme-poursuite {
+    background: linear-gradient(180deg, #fff5f0 0%, #ffffff 100%);
+}
+
+.page-theme-poursuite .s-project-hero {
+    background: linear-gradient(135deg, #fff5f0 0%, #ffffff 50%, #ffe8dc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-poursuite .s-project-hero::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 171, 145, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-theme-poursuite .s-project-hero::after {
+    content: '🎓';
+    position: absolute;
+    top: 180px;
+    right: 80px;
+    font-size: 5rem;
+    filter: drop-shadow(0 8px 20px rgba(255, 112, 67, 0.4));
+    animation: capFloat 2.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes capFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+.page-theme-poursuite .project-hero__back {
+    color: #d84315;
+    background: rgba(255, 171, 145, 0.2);
+    border-color: rgba(255, 112, 67, 0.3);
+}
+
+.page-theme-poursuite .project-hero__back:hover {
+    background: rgba(255, 171, 145, 0.35);
+    color: #bf360c;
+}
+
+.page-theme-poursuite .project-hero__title {
+    background: linear-gradient(135deg, #d84315 0%, #ff7043 50%, #ffab91 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-theme-poursuite .project-hero__subtitle {
+    color: #4e342e;
+    font-size: 1.8rem;
+}
+
+.page-theme-poursuite .project-hero__tags .project-card__tag {
+    background: linear-gradient(135deg, rgba(255, 171, 145, 0.3) 0%, rgba(255, 204, 188, 0.3) 100%);
+    color: #d84315;
+    border: 2px solid rgba(255, 112, 67, 0.4);
+    font-weight: 700;
+}
+
+.page-theme-poursuite .project-hero__tags .project-card__tag:hover {
+    background: linear-gradient(135deg, #ff7043 0%, #ffab91 100%);
+    color: #fff;
+}
+
+.page-theme-poursuite .project-hero__meta {
+    border-top-color: rgba(255, 171, 145, 0.4);
+}
+
+.page-theme-poursuite .project-hero__meta strong {
+    color: #d84315;
+}
+
+.page-theme-poursuite .s-project-content {
+    background: linear-gradient(180deg, #ffffff 0%, #fff5f0 50%, #ffe8dc 100%);
+}
+
+.page-theme-poursuite .project-section {
+    background: linear-gradient(135deg, #ffffff 0%, #fff8f5 100%);
+    border: 2px solid rgba(255, 171, 145, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-poursuite .project-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7043, #ffab91, #ffccbc, #ffab91, #ff7043);
+}
+
+.page-theme-poursuite .project-section:hover {
+    box-shadow: 0 15px 50px rgba(255, 112, 67, 0.15);
+    border-color: rgba(255, 112, 67, 0.4);
+}
+
+.page-theme-poursuite .project-section h3 {
+    color: #d84315;
+    position: relative;
+    display: inline-block;
+}
+
+.page-theme-poursuite .project-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7043, #ffab91);
+    border-radius: 2px;
+}
+
+.page-theme-poursuite .project-list li::before {
+    background: linear-gradient(135deg, #ff7043, #ffab91);
+}
+
+.page-theme-poursuite .project-tech-item,
+.page-theme-poursuite .project-tool-card {
+    background: linear-gradient(135deg, #fff8f5 0%, #ffffff 100%);
+    border: 2px solid rgba(255, 171, 145, 0.25);
+}
+
+.page-theme-poursuite .project-tech-item::before,
+.page-theme-poursuite .project-tool-card::before {
+    background: linear-gradient(90deg, #ff7043, #ffab91);
+}
+
+.page-theme-poursuite .project-tech-item:hover,
+.page-theme-poursuite .project-tool-card:hover {
+    box-shadow: 0 15px 40px rgba(255, 112, 67, 0.15);
+    border-color: #ffab91;
+}
+
+.page-theme-poursuite .project-tech-item h4 {
+    color: #d84315;
+}
+
+.page-theme-poursuite .project-gallery__item {
+    border: 3px solid rgba(255, 171, 145, 0.35);
+}
+
+.page-theme-poursuite .project-gallery__item:hover {
+    border-color: #ff7043;
+    box-shadow: 0 20px 50px rgba(255, 112, 67, 0.25);
+}
+
+.page-theme-poursuite .project-external-link {
+    background: linear-gradient(135deg, #d84315 0%, #ff7043 100%);
+}
+
+.page-theme-poursuite .project-external-link:hover {
+    background: linear-gradient(135deg, #bf360c 0%, #e64a19 100%);
+    box-shadow: 0 10px 30px rgba(255, 112, 67, 0.4);
+}
+
+.page-theme-poursuite .s-footer {
+    background: linear-gradient(180deg, #fff5f0 0%, #d84315 100%);
+}
+
+/* Decorative books animation for Poursuite page */
+.page-theme-poursuite .s-project-content::before {
+    content: '📚';
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3rem;
+    opacity: 0.5;
+    animation: booksFloat 2.5s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes booksFloat {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-6px) rotate(3deg); }
+}
+
+
+/* === MYAVATAR PAGE - Deep Blue & White === */
+.page-theme-avatar {
+    background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+}
+
+.page-theme-avatar .s-project-hero {
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #bbdefb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-avatar .s-project-hero::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(100, 181, 246, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.page-theme-avatar .s-project-hero::after {
+    content: '👤';
+    position: absolute;
+    top: 180px;
+    right: 80px;
+    font-size: 5rem;
+    filter: drop-shadow(0 8px 20px rgba(21, 101, 192, 0.4));
+    animation: avatarPulseFloat 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes avatarPulseFloat {
+    0%, 100% { transform: scale(1) translateY(0); opacity: 1; }
+    50% { transform: scale(1.1) translateY(-8px); opacity: 0.9; }
+}
+
+.page-theme-avatar .project-hero__back {
+    color: #1565c0;
+    background: rgba(100, 181, 246, 0.2);
+    border-color: rgba(30, 136, 229, 0.3);
+}
+
+.page-theme-avatar .project-hero__back:hover {
+    background: rgba(100, 181, 246, 0.35);
+    color: #0d47a1;
+}
+
+.page-theme-avatar .project-hero__title {
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #42a5f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-theme-avatar .project-hero__subtitle {
+    color: #37474f;
+    font-size: 1.8rem;
+}
+
+.page-theme-avatar .project-hero__tags .project-card__tag {
+    background: linear-gradient(135deg, rgba(100, 181, 246, 0.25) 0%, rgba(187, 222, 251, 0.3) 100%);
+    color: #1565c0;
+    border: 2px solid rgba(30, 136, 229, 0.4);
+    font-weight: 700;
+}
+
+.page-theme-avatar .project-hero__tags .project-card__tag:hover {
+    background: linear-gradient(135deg, #1e88e5 0%, #42a5f5 100%);
+    color: #fff;
+}
+
+.page-theme-avatar .project-hero__meta {
+    border-top-color: rgba(100, 181, 246, 0.4);
+}
+
+.page-theme-avatar .project-hero__meta strong {
+    color: #1565c0;
+}
+
+.page-theme-avatar .s-project-content {
+    background: linear-gradient(180deg, #ffffff 0%, #e3f2fd 50%, #bbdefb 100%);
+}
+
+.page-theme-avatar .project-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+    border: 2px solid rgba(100, 181, 246, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-theme-avatar .project-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1565c0, #1e88e5, #42a5f5, #1e88e5, #1565c0);
+}
+
+.page-theme-avatar .project-section:hover {
+    box-shadow: 0 15px 50px rgba(21, 101, 192, 0.15);
+    border-color: rgba(30, 136, 229, 0.4);
+}
+
+.page-theme-avatar .project-section h3 {
+    color: #1565c0;
+    position: relative;
+    display: inline-block;
+}
+
+.page-theme-avatar .project-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1565c0, #42a5f5);
+    border-radius: 2px;
+}
+
+.page-theme-avatar .project-list li::before {
+    background: linear-gradient(135deg, #1565c0, #42a5f5);
+}
+
+.page-theme-avatar .project-tech-item,
+.page-theme-avatar .project-tool-card {
+    background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+    border: 2px solid rgba(100, 181, 246, 0.25);
+}
+
+.page-theme-avatar .project-tech-item::before,
+.page-theme-avatar .project-tool-card::before {
+    background: linear-gradient(90deg, #1565c0, #42a5f5);
+}
+
+.page-theme-avatar .project-tech-item:hover,
+.page-theme-avatar .project-tool-card:hover {
+    box-shadow: 0 15px 40px rgba(21, 101, 192, 0.15);
+    border-color: #64b5f6;
+}
+
+.page-theme-avatar .project-tech-item h4 {
+    color: #1565c0;
+}
+
+.page-theme-avatar .project-gallery__item {
+    border: 3px solid rgba(100, 181, 246, 0.35);
+}
+
+.page-theme-avatar .project-gallery__item:hover {
+    border-color: #1e88e5;
+    box-shadow: 0 20px 50px rgba(21, 101, 192, 0.25);
+}
+
+.page-theme-avatar .project-external-link {
+    background: linear-gradient(135deg, #1565c0 0%, #1e88e5 100%);
+}
+
+.page-theme-avatar .project-external-link:hover {
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+    box-shadow: 0 10px 30px rgba(21, 101, 192, 0.4);
+}
+
+.page-theme-avatar .s-footer {
+    background: linear-gradient(180deg, #e3f2fd 0%, #1565c0 100%);
+}
+
+/* Decorative lock animation for Avatar page */
+.page-theme-avatar .s-project-content::before {
+    content: '🔐';
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3rem;
+    opacity: 0.5;
+    animation: lockFloat 2.8s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes lockFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-6px) scale(1.05); }
+}
+
+/* === Responsive adjustments for themed pages === */
+@media screen and (max-width: 900px) {
+    .page-theme-wavy .s-project-hero::after,
+    .page-theme-poursuite .s-project-hero::after,
+    .page-theme-avatar .s-project-hero::after {
+        font-size: 3.5rem;
+        top: 80px;
+        right: 30px;
+    }
+    
+    .page-theme-wavy .s-project-content::before,
+    .page-theme-poursuite .s-project-content::before,
+    .page-theme-avatar .s-project-content::before {
+        font-size: 2rem;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-theme-wavy .s-project-hero::after,
+    .page-theme-poursuite .s-project-hero::after,
+    .page-theme-avatar .s-project-hero::after {
+        font-size: 2.5rem;
+        top: 70px;
+        right: 15px;
+    }
+    
+    .page-theme-wavy .s-project-content::before,
+    .page-theme-poursuite .s-project-content::before,
+    .page-theme-avatar .s-project-content::before {
+        display: none;
     }
 }

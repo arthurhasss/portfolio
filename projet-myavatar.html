@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 
-<body id="top">
+<body id="top" class="page-theme-avatar">
 
     <div id="preloader">
         <div id="loader" class="dots-fade">
@@ -69,7 +69,7 @@
                         </a>
                         
                         <div class="project-title-wrapper">
-                            <h1 class="project-hero__title">My Avatar Symfony</h1>
+                            <h1 class="project-hero__title">My Avatar</h1>
                         </div>
                         
                         <p class="project-hero__subtitle">Application de gestion d'avatars inspirée de Gravatar</p>
@@ -83,7 +83,7 @@
                         
                         <div class="project-hero__meta">
                             <span><strong>Période :</strong> 2025</span>
-                            <span><strong>Équipe :</strong> Quadrinôme</span>
+                            <span><strong>Équipe :</strong> 4 personnes</span>
                             <span><strong>Contexte :</strong> BUT Informatique</span>
                         </div>
                     </div>
@@ -98,24 +98,11 @@
                     <div class="project-section">
                          <h3>Contexte du projet</h3>
                         <p class="attention-getter">
-                            Ce projet a été réalisé dans le cadre du BUT Informatique en équipe de 4 personnes. L'objectif était 
+                            Ce projet a été réalisé dans le cadre du BUT Informatique. L'objectif était 
                             de développer une application web en <strong>Server-Side Rendering</strong> avec <strong>Symfony</strong> et <strong>Twig</strong>, 
                             permettant la gestion d'avatars à la manière du service <strong>Gravatar</strong>. L'application permet 
                             d'associer une photo de profil à une adresse email, accessible via un hash SHA256 de cette adresse.
                         </p>
-                    </div>
-
-                    <div class="project-section">
-                        <h3>Principe de fonctionnement</h3>
-                        <p class="attention-getter">
-                            À l'instar de Gravatar, le service MyAvatar permet à n'importe quelle application de récupérer 
-                            l'avatar d'un utilisateur simplement en connaissant son adresse email. Le processus est le suivant :
-                        </p>
-                        <ul class="attention-getter">
-                            <li>L'adresse email de l'utilisateur est hachée avec l'algorithme <strong>SHA256</strong></li>
-                            <li>L'avatar est accessible via une URL du type : <code>/avatar/{hash}</code></li>
-                            <li>Si l'utilisateur n'existe pas ou n'a pas de photo, une image par défaut est renvoyée</li>
-                        </ul>
                     </div>
 
                     <div class="project-section">
@@ -146,46 +133,49 @@
 
                     <div class="project-section">
                          <h3>Architecture technique</h3>
-                        <div class="project-tech-grid">
-                            <div class="project-tech-item">
-                                <h4>Backend</h4>
-                                <p>PHP 8 / Symfony 6</p>
+                        <div class="tech-stack-modern">
+                            <div class="tech-stack-item">
+                                <div class="tech-stack-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                </div>
+                                <div class="tech-stack-content">
+                                    <h4>Backend</h4>
+                                    <p>PHP 8 & Symfony 6</p>
+                                    <span class="tech-stack-badge">MVC</span>
+                                </div>
                             </div>
-                            <div class="project-tech-item">
-                                <h4>Frontend</h4>
-                                <p>Twig, HTML, CSS, JavaScript</p>
+                            <div class="tech-stack-item">
+                                <div class="tech-stack-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                                </div>
+                                <div class="tech-stack-content">
+                                    <h4>Frontend</h4>
+                                    <p>Twig, HTML & CSS</p>
+                                    <span class="tech-stack-badge">JS/AJAX</span>
+                                </div>
                             </div>
-                            <div class="project-tech-item">
-                                <h4>Base de données</h4>
-                                <p>MySQL / PostgreSQL</p>
+                            <div class="tech-stack-item">
+                                <div class="tech-stack-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+                                </div>
+                                <div class="tech-stack-content">
+                                    <h4>Base de données</h4>
+                                    <p>MySQL </p>
+                                </div>
                             </div>
-                            <div class="project-tech-item">
-                                <h4>Outils</h4>
-                                <p>Git, Composer, Doctrine ORM</p>
+                            <div class="tech-stack-item">
+                                <div class="tech-stack-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                                </div>
+                                <div class="tech-stack-content">
+                                    <h4>Outils</h4>
+                                    <p>Git & Composer</p>
+                                    <span class="tech-stack-badge">ORM</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-section">
-                        <h3>Fonctionnalités d'administration</h3>
-                        <ul class="attention-getter">
-                            <li><strong>Gestion des utilisateurs :</strong> Liste complète avec possibilité de suppression (sauf administrateurs)</li>
-                            <li><strong>Commande de création :</strong> <code>php bin/console app:create-user</code> avec arguments ou mode interactif</li>
-                            <li><strong>Commande de suppression :</strong> <code>php bin/console app:delete-user {login}</code></li>
-                            <li><strong>Gestion des rôles :</strong> Attribution de rôles utilisateur ou administrateur</li>
-                        </ul>
-                    </div>
-
-                    <div class="project-section">
-                        <h3>Sécurité et bonnes pratiques</h3>
-                        <ul class="attention-getter">
-                            <li>Protection des répertoires sensibles via fichiers <code>.htaccess</code></li>
-                            <li>Validation du mot de passe actuel pour toute modification de compte</li>
-                            <li>Hashage sécurisé des mots de passe</li>
-                            <li>Contrôle d'accès basé sur les rôles (ROLE_USER, ROLE_ADMIN)</li>
-                            <li>Protection CSRF sur les formulaires</li>
-                        </ul>
-                    </div>
 
                     <div class="project-section">
                          <h3>Compétences développées</h3>
@@ -200,19 +190,10 @@
                             <li>Travail en équipe avec Git et déploiement sur serveur</li>
                         </ul>
                     </div>
-
-                    <div class="project-section">
-                        <h3>Hébergement et déploiement</h3>
-                        <p class="attention-getter">
-                            L'application a été déployée sur le serveur webinfo de l'IUT Montpellier, avec configuration 
-                            des droits d'accès via ACL et connexion à la base de données MySQL/PostgreSQL de l'IUT.
-                        </p>
-                    </div>
-
                     <div class="project-section">
                         <h3>Accéder au projet</h3>
-                        <a href="" class="project-external-link" target="_blank">
-                            Application hébergée sur serveur IUT (accès restreint)
+                        <a href="https://webinfo.iutmontp.univ-montp2.fr/~percheta/web_myAvatar/shared/public_html/my_avatar/public/home" class="project-external-link" target="_blank">
+                            Voir l'application en ligne
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
                             </svg>
