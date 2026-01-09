@@ -584,7 +584,14 @@
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Force le bouton à passer sous le titre */
+.project-section h3 + .project-external-link {
+    display: flex;
+    width: fit-content;
 }
 
 .project-external-link:hover {
@@ -887,6 +894,43 @@
     background: linear-gradient(180deg, #e0f4ff 0%, #0277bd 100%);
 }
 
+/* Bouton Mail thème Wavy */
+.page-theme-wavy .btn.btn--primary {
+    background-color: #0277bd !important;
+    border-color: #0277bd !important;
+}
+
+.page-theme-wavy .btn.btn--primary:hover {
+    background-color: #01579b !important;
+    border-color: #01579b !important;
+}
+
+/* Barre du footer thème Wavy */
+.page-theme-wavy .s-footer::before {
+    background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+}
+
+/* Barre sous les titres de section thème Wavy */
+.page-theme-wavy .section-header .text-display-title::after {
+    background: linear-gradient(90deg, #4fc3f7, #81d4fa);
+}
+
+.page-theme-wavy .section-header::before {
+    background: linear-gradient(180deg, rgba(79, 195, 247, 0.4) 0%, rgba(79, 195, 247, 0.15) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Scrollbar thème Wavy */
+.page-theme-wavy::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4fc3f7, #81d4fa);
+}
+
+.page-theme-wavy::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0288d1, #4fc3f7);
+}
+
 /* Decorative wave animation for Wavy page */
 .page-theme-wavy .s-project-content::before {
     content: '🌊';
@@ -1076,6 +1120,38 @@
     background: linear-gradient(180deg, #fff5f0 0%, #d84315 100%);
 }
 
+/* Bouton Mail thème Poursuite */
+.page-theme-poursuite .btn.btn--primary {
+    background-color: #d84315 !important;
+    border-color: #d84315 !important;
+}
+
+.page-theme-poursuite .btn.btn--primary:hover {
+    background-color: #bf360c !important;
+    border-color: #bf360c !important;
+}
+
+/* Barre sous les titres de section thème Poursuite */
+.page-theme-poursuite .section-header .text-display-title::after {
+    background: linear-gradient(90deg, #ff7043, #ffab91);
+}
+
+.page-theme-poursuite .section-header::before {
+    background: linear-gradient(180deg, rgba(255, 112, 67, 0.4) 0%, rgba(255, 112, 67, 0.15) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Scrollbar thème Poursuite */
+.page-theme-poursuite::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff7043, #ffab91);
+}
+
+.page-theme-poursuite::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e64a19, #ff7043);
+}
+
 /* Decorative books animation for Poursuite page */
 .page-theme-poursuite .s-project-content::before {
     content: '📚';
@@ -1263,6 +1339,43 @@
 
 .page-theme-avatar .s-footer {
     background: linear-gradient(180deg, #e3f2fd 0%, #1565c0 100%);
+}
+
+/* Bouton Mail thème Avatar */
+.page-theme-avatar .btn.btn--primary {
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+.page-theme-avatar .btn.btn--primary:hover {
+    background-color: #0d47a1 !important;
+    border-color: #0d47a1 !important;
+}
+
+/* Barre du footer thème Avatar */
+.page-theme-avatar .s-footer::before {
+    background: linear-gradient(90deg, transparent, #42a5f5, transparent);
+}
+
+/* Barre sous les titres de section thème Avatar */
+.page-theme-avatar .section-header .text-display-title::after {
+    background: linear-gradient(90deg, #1565c0, #42a5f5);
+}
+
+.page-theme-avatar .section-header::before {
+    background: linear-gradient(180deg, rgba(21, 101, 192, 0.4) 0%, rgba(21, 101, 192, 0.15) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Scrollbar thème Avatar */
+.page-theme-avatar::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #1565c0, #42a5f5);
+}
+
+.page-theme-avatar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0d47a1, #1565c0);
 }
 
 /* Decorative lock animation for Avatar page */
