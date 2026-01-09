@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Application de poursuites d'études | Arthur HASS</title>
+    <title>My Avatar Symfony | Arthur HASS</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -69,21 +69,21 @@
                         </a>
                         
                         <div class="project-title-wrapper">
-                            <h1 class="project-hero__title">Application de poursuites d'études</h1>
+                            <h1 class="project-hero__title">My Avatar Symfony</h1>
                         </div>
                         
-                        <p class="project-hero__subtitle">Site web de gestion académique et administrative</p>
+                        <p class="project-hero__subtitle">Application de gestion d'avatars inspirée de Gravatar</p>
                         
                         <div class="project-hero__tags">
                             <span class="project-card__tag">PHP / Symfony</span>
-                            <span class="project-card__tag">JavaScript</span>
-                            <span class="project-card__tag">SQL</span>
-                            <span class="project-card__tag">HTML/CSS</span>
+                            <span class="project-card__tag">Twig</span>
+                            <span class="project-card__tag">JavaScript / AJAX</span>
+                            <span class="project-card__tag">MySQL</span>
                         </div>
                         
                         <div class="project-hero__meta">
-                            <span><strong>Période :</strong> 2024</span>
-                            <span><strong>Équipe :</strong> Projet académique</span>
+                            <span><strong>Période :</strong> 2025</span>
+                            <span><strong>Équipe :</strong> Quadrinôme</span>
                             <span><strong>Contexte :</strong> BUT Informatique</span>
                         </div>
                     </div>
@@ -98,23 +98,49 @@
                     <div class="project-section">
                          <h3>Contexte du projet</h3>
                         <p class="attention-getter">
-                            Ce projet a été développé dans le cadre de mon BUT Informatique. Il s'agit d'un site web complet 
-                            destiné à la gestion académique et administrative d'une formation universitaire. La plateforme 
-                            permet de gérer efficacement les étudiants, leurs résultats, leurs vœux de poursuite d'études, 
-                            ainsi que les différents rôles et permissions des utilisateurs.
+                            Ce projet a été réalisé dans le cadre du BUT Informatique en équipe de 4 personnes. L'objectif était 
+                            de développer une application web en <strong>Server-Side Rendering</strong> avec <strong>Symfony</strong> et <strong>Twig</strong>, 
+                            permettant la gestion d'avatars à la manière du service <strong>Gravatar</strong>. L'application permet 
+                            d'associer une photo de profil à une adresse email, accessible via un hash SHA256 de cette adresse.
                         </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Principe de fonctionnement</h3>
+                        <p class="attention-getter">
+                            À l'instar de Gravatar, le service MyAvatar permet à n'importe quelle application de récupérer 
+                            l'avatar d'un utilisateur simplement en connaissant son adresse email. Le processus est le suivant :
+                        </p>
+                        <ul class="attention-getter">
+                            <li>L'adresse email de l'utilisateur est hachée avec l'algorithme <strong>SHA256</strong></li>
+                            <li>L'avatar est accessible via une URL du type : <code>/avatar/{hash}</code></li>
+                            <li>Si l'utilisateur n'existe pas ou n'a pas de photo, une image par défaut est renvoyée</li>
+                        </ul>
                     </div>
 
                     <div class="project-section">
                         <h3>Fonctionnalités principales</h3>
                         <ul class="attention-getter">
-                            <li><strong>Gestion complète des étudiants :</strong> Opérations CRUD (Create, Read, Update, Delete)</li>
-                            <li><strong>Suivi académique :</strong> Suivi des résultats et performances des étudiants</li>
-                            <li><strong>Système de vœux :</strong> Gestion des poursuites d'études et candidatures</li>
-                            <li><strong>Contrôle d'accès :</strong> Gestion des rôles et permissions utilisateurs</li>
-                            <li><strong>Import/Export :</strong> Traitement de fichiers CSV et Excel pour les données</li>
-                            <li><strong>Rapports et statistiques :</strong> Génération de tableaux de bord analytiques</li>
-                            <li><strong>Interface d'administration :</strong> Panneau de contrôle complet pour les administrateurs</li>
+                            <li><strong>Inscription et authentification :</strong> Création de compte avec login, mot de passe, email et photo de profil optionnelle</li>
+                            <li><strong>Gestion du profil :</strong> Visualisation, modification et suppression de la photo de profil</li>
+                            <li><strong>Modification du compte :</strong> Changement de mot de passe et d'adresse email avec validation</li>
+                            <li><strong>Vérification en temps réel :</strong> Contrôle AJAX de l'unicité du login et de l'email sans rechargement</li>
+                            <li><strong>Masquage du profil :</strong> Possibilité de masquer/démasquer son avatar via un bouton AJAX</li>
+                            <li><strong>Mode maintenance :</strong> Activation via fichier .env redirigeant toutes les pages vers une page de maintenance</li>
+                            <li><strong>Administration :</strong> Page de gestion des utilisateurs pour les administrateurs</li>
+                            <li><strong>Commandes Symfony :</strong> Création et suppression d'utilisateurs via le terminal</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Contraintes techniques</h3>
+                        <ul class="attention-getter">
+                            <li><strong>Stockage sécurisé :</strong> Les photos de profil ne sont pas stockées dans le dossier public (accessible via contrôleur uniquement)</li>
+                            <li><strong>BinaryFileResponse :</strong> Utilisation de réponses binaires Symfony pour servir les images</li>
+                            <li><strong>Hash SHA256 :</strong> Mise à jour automatique du hash lors de la modification de l'email</li>
+                            <li><strong>JavaScript natif :</strong> Pas de framework JS, uniquement du JavaScript vanilla avec AJAX</li>
+                            <li><strong>Debouncing :</strong> Implémentation d'un système de debounce pour les vérifications en temps réel</li>
+                            <li><strong>Événements Symfony :</strong> Utilisation des événements pour gérer le mode maintenance</li>
                         </ul>
                     </div>
 
@@ -123,48 +149,70 @@
                         <div class="project-tech-grid">
                             <div class="project-tech-item">
                                 <h4>Backend</h4>
-                                <p>PHP </p>
+                                <p>PHP 8 / Symfony 6</p>
                             </div>
                             <div class="project-tech-item">
                                 <h4>Frontend</h4>
-                                <p>HTML, CSS, JavaScript</p>
+                                <p>Twig, HTML, CSS, JavaScript</p>
                             </div>
                             <div class="project-tech-item">
                                 <h4>Base de données</h4>
-                                <p>MySQL</p>
+                                <p>MySQL / PostgreSQL</p>
                             </div>
                             <div class="project-tech-item">
                                 <h4>Outils</h4>
-                                <p>Git, Twig</p>
+                                <p>Git, Composer, Doctrine ORM</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="project-section">
-                         <h3>Capture d'écran</h3>
-                        <div class="project-gallery">
-                            <div class="project-gallery__item" onclick="openModal('images/Projets/accueil-poursuite.png', 'Page d\'accueil')">
-                                <img src="images/Projets/accueil-poursuite.png" alt="Poursuite - Page d'accueil">
-                                <span class="project-gallery__caption">Page d'accueil</span>
-                            </div>
-                        </div>
+                        <h3>Fonctionnalités d'administration</h3>
+                        <ul class="attention-getter">
+                            <li><strong>Gestion des utilisateurs :</strong> Liste complète avec possibilité de suppression (sauf administrateurs)</li>
+                            <li><strong>Commande de création :</strong> <code>php bin/console app:create-user</code> avec arguments ou mode interactif</li>
+                            <li><strong>Commande de suppression :</strong> <code>php bin/console app:delete-user {login}</code></li>
+                            <li><strong>Gestion des rôles :</strong> Attribution de rôles utilisateur ou administrateur</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Sécurité et bonnes pratiques</h3>
+                        <ul class="attention-getter">
+                            <li>Protection des répertoires sensibles via fichiers <code>.htaccess</code></li>
+                            <li>Validation du mot de passe actuel pour toute modification de compte</li>
+                            <li>Hashage sécurisé des mots de passe</li>
+                            <li>Contrôle d'accès basé sur les rôles (ROLE_USER, ROLE_ADMIN)</li>
+                            <li>Protection CSRF sur les formulaires</li>
+                        </ul>
                     </div>
 
                     <div class="project-section">
                          <h3>Compétences développées</h3>
                         <ul class="attention-getter">
-                            <li>Architecture MVC</li>
-                            <li>Conception et modélisation de base de données</li>
-                            <li>Sécurité web (authentification, autorisation)</li>
-                            <li>Manipulation de fichiers et imports de données</li>
-                            <li>Travail en équipe avec Git et méthode Agile</li>
+                            <li>Développement d'applications web full-stack avec Symfony</li>
+                            <li>Architecture MVC et moteur de templates Twig</li>
+                            <li>Gestion de l'authentification et des autorisations</li>
+                            <li>Manipulation de fichiers et réponses binaires</li>
+                            <li>Requêtes AJAX et JavaScript asynchrone</li>
+                            <li>Création de commandes console Symfony</li>
+                            <li>Gestion d'événements Symfony (EventSubscriber)</li>
+                            <li>Travail en équipe avec Git et déploiement sur serveur</li>
                         </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>Hébergement et déploiement</h3>
+                        <p class="attention-getter">
+                            L'application a été déployée sur le serveur webinfo de l'IUT Montpellier, avec configuration 
+                            des droits d'accès via ACL et connexion à la base de données MySQL/PostgreSQL de l'IUT.
+                        </p>
                     </div>
 
                     <div class="project-section">
                         <h3>Accéder au projet</h3>
                         <a href="" class="project-external-link" target="_blank">
-                            Application non disponible publiquement
+                            Application hébergée sur serveur IUT (accès restreint)
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/>
                             </svg>
